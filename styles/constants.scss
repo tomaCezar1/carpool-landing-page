@@ -1,0 +1,33 @@
+//Colors
+$grey: #e9ecf0;
+$greyLight: #f6f6f6;
+$white: #ffffff;
+$black: #000000;
+$orange: #e85500;
+
+//Fonts
+$primaryFont: 'Whyte Inktrap';
+$secondaryFont: 'Source Sans Pro';
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/assets/SourceSansPro-Regular.ttf');
+  font-weight: 400; //regular
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/assets/SourceSansPro-SemiBold.ttf');
+  font-weight: 600; //semi-bold
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/assets/WhyteInktrap-Black.ttf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/assets/WhyteInktrap-Regular.ttf');
+  font-weight: 400; //regular
+}
