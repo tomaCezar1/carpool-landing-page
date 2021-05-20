@@ -216,7 +216,7 @@
   }
 
   .switch {
-    padding: 10px 20px;
+    padding: 12px 20px;
     width: 100px;
     background-color: $white;
     border-radius: 8px;
@@ -235,13 +235,111 @@
     width: 100px;
     background-color: transparent;
     border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
 
     p {
       opacity: 0.5;
       font-family: $secondaryFontBold;
     }
+  }
+}
+
+.ar-section {
+  @extend %flex-center;
+  margin-bottom: 210px;
+  padding: 0 26px;
+}
+
+.ar-container {
+  width: 100%;
+  max-width: 1390px;
+  height: 680px;
+  background: url('../assets/images/ar-img.png') no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ar-text {
+  margin-top: 4px;
+  justify-self: flex-start;
+  font-family: $secondaryFontLight;
+  font-size: 24px;
+  color: $white;
+}
+
+.ar-mock-img {
+  width: 300px;
+  height: 600px;
+  margin-top: 110px;
+  object-fit: cover;
+}
+
+.fun-way-section {
+  @extend %flex-center;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 140px;
+  position: relative;
+
+  .grey-rectangle {
+    width: 272px;
+    height: 100%;
+    background-color: $grey;
+    border-radius: 28px;
+  }
+
+  .fun-way-img {
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.video-section {
+  @extend %flex-center;
+  height: 810px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+
+  .video {
+    justify-self: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), $black);
+    }
+  }
+
+  .video-text {
+    font-size: 72px;
+    font-family: $primaryFont;
+  }
+
+  .video-description {
+    font-size: 24px;
+    font-family: $secondaryFontLight;
+    opacity: 0.8;
+    margin-top: 8px;
+  }
+
+  .video-text-container {
+    position: absolute;
+    bottom: 0;
+    margin: 0 32px 90px 32px;
   }
 }
