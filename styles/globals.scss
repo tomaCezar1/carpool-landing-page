@@ -1,0 +1,25 @@
+// @import 'constants.scss';
+// @import 'styles.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  // position: relative;
+  // font-family: $secondaryFontBold;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.layout {
+  // margin: auto;
+  // width: 1440px;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}

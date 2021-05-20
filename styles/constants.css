@@ -1,23 +1,30 @@
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro Regular';
   src: url("/assets/SourceSansPro-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro Semi-Bold';
   src: url("/assets/SourceSansPro-SemiBold.ttf");
   font-weight: 600;
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url("/assets/WhyteInktrap-Black.ttf");
+  font-family: 'WhyteInktrap';
+  src: url("/assets/WhyteInktrap-Light.ttf");
+  font-weight: 300;
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'WhyteInktrap';
   src: url("/assets/WhyteInktrap-Regular.ttf");
   font-weight: 400;
+}
+
+@font-face {
+  font-family: 'WhyteInktrap';
+  src: url("/assets/WhyteInktrap-Medium.ttf");
+  font-weight: 500;
 }
 /*# sourceMappingURL=constants.css.map */

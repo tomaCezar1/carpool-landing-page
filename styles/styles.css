@@ -1,0 +1,335 @@
+@font-face {
+  font-family: 'Source Sans Pro Regular';
+  src: url("/assets/SourceSansPro-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Semi-Bold';
+  src: url("/assets/SourceSansPro-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'WhyteInktrap';
+  src: url("/assets/WhyteInktrap-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'WhyteInktrap';
+  src: url("/assets/WhyteInktrap-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'WhyteInktrap';
+  src: url("/assets/WhyteInktrap-Medium.ttf");
+  font-weight: 500;
+}
+
+.how-to-container .how-to-switcher-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  height: 72px;
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1160px;
+  height: 72px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+}
+
+.nav .nav-brand {
+  cursor: pointer;
+}
+
+.nav a {
+  font-size: 16px;
+  margin-right: 40px;
+  font-family: "Source Sans Pro Semi-Bold";
+}
+
+.nav .nav-black-link {
+  color: #000000;
+  margin-left: 0;
+}
+
+.nav .nav-grey-link {
+  color: #000000;
+  opacity: 0.5;
+}
+
+.nav .nav-lightGrey-link {
+  color: #000000;
+  opacity: 0.3;
+  margin-right: 0;
+}
+
+.nav .nav-download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .nav-download h3 {
+  margin-right: 16px;
+  font-weight: 500;
+  color: #000000;
+  font-family: "Source Sans Pro Semi-Bold";
+}
+
+.nav .nav-download .nav-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: solid 1px #000000;
+}
+
+.nav .nav-download #nav-apple {
+  margin-right: 16px;
+}
+
+.intro {
+  position: relative;
+  margin: 232px 240px 0 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.intro-text-wrapper {
+  width: 960px;
+  height: 160px;
+}
+
+.intro-text-wrapper .intro-text {
+  text-align: center;
+  font-size: 80px;
+  font-weight: 400;
+  font-family: 'WhyteInktrap';
+}
+
+.intro-text-wrapper .intro-text .intro-bold {
+  font-weight: 500;
+}
+
+.intro-text-wrapper .intro-text .intro-italic {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.intro-text-wrapper .fun-img-container {
+  width: 132px;
+  height: 60px;
+  display: inline-block;
+  position: relative;
+}
+
+.intro-text-wrapper .fun-img-container img {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 132px;
+  height: 80px;
+  -webkit-transform: rotate(-9deg);
+          transform: rotate(-9deg);
+}
+
+.intro-mock {
+  width: 100%;
+  height: 100%;
+  margin: 18px 0 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro-mock .intro-mock-img {
+  width: 338px;
+  height: 622px;
+}
+
+.intro-mock-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 380px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), color-stop(rgba(255, 255, 255, 0.88)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0));
+}
+
+.how-to-bg-section {
+  background-color: #f6f6f6;
+  max-width: 100% !important;
+  height: 765px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.how-to-container {
+  width: 1142px;
+  height: 646px;
+  border-radius: 28px;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.how-to-container .how-to-img {
+  width: 676px;
+  height: 215px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.how-to-container .how-to-text {
+  font-size: 16px;
+  font-family: "Source Sans Pro Semi-Bold";
+  margin: 40px 0 80px;
+}
+
+.how-to-container .how-to-switcher-container {
+  width: 360px;
+  height: 128px;
+  border: 1px solid #e9ecf0;
+  border-radius: 16px;
+}
+
+.how-to-switcher {
+  width: 300px;
+  height: 40px;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.how-to-switcher p {
+  font-family: "Source Sans Pro Regular";
+}
+
+.how-to-switcher .switch {
+  padding: 10px 20px;
+  width: 100px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.how-to-switcher .switch p {
+  font-family: "Source Sans Pro Semi-Bold";
+}
+
+.how-to-switcher .switch-off {
+  padding: 10px 20px;
+  width: 100px;
+  background-color: transparent;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.how-to-switcher .switch-off p {
+  opacity: 0.5;
+  font-family: "Source Sans Pro Semi-Bold";
+}
+/*# sourceMappingURL=styles.css.map */

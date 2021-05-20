@@ -5,29 +5,49 @@ $white: #ffffff;
 $black: #000000;
 $orange: #e85500;
 
+//Breakpoints
+$desktop: 1440px;
+$tablet: 768px;
+$mobile: 375px;
+
+// Font-Weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
 //Fonts
-$primaryFont: 'Whyte Inktrap';
-$secondaryFont: 'Source Sans Pro';
+$primaryFont: 'WhyteInktrap';
+$secondaryFontLight: 'Source Sans Pro Regular';
+$secondaryFontBold: 'Source Sans Pro Semi-Bold';
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro Regular';
   src: url('/assets/SourceSansPro-Regular.ttf');
   font-weight: 400; //regular
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro Semi-Bold';
   src: url('/assets/SourceSansPro-SemiBold.ttf');
   font-weight: 600; //semi-bold
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: url('/assets/WhyteInktrap-Black.ttf');
+  font-family: 'WhyteInktrap';
+  src: url('/assets/WhyteInktrap-Light.ttf');
+  font-weight: 300; // light
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'WhyteInktrap';
   src: url('/assets/WhyteInktrap-Regular.ttf');
   font-weight: 400; //regular
+}
+
+@font-face {
+  font-family: 'WhyteInktrap';
+  src: url('/assets/WhyteInktrap-Medium.ttf');
+  font-weight: 500; //medium
 }
