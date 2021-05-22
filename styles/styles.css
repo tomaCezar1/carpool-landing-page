@@ -28,7 +28,7 @@
   font-weight: 500;
 }
 
-.how-to-container .how-to-switcher-container, .how-to-switcher .switch-off, .ar-section, .fun-way-section, .video-section {
+.how-to-container .how-to-switcher-container, .how-to-switcher .switch-off, .ar-section, .fun-way-section, .video-section, .footer, .footer .footer-btns-container, .footer .download-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,6 +306,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .how-to-switcher .switch p {
@@ -313,6 +314,7 @@
 }
 
 .how-to-switcher .switch-off {
+  cursor: pointer;
   padding: 10px 20px;
   width: 100px;
   background-color: transparent;
@@ -405,6 +407,7 @@
       -ms-flex-align: center;
           align-items: center;
   color: #ffffff;
+  border-bottom: 1px solid #e9ecf0;
 }
 
 .video-section .video {
@@ -439,5 +442,105 @@
   position: absolute;
   bottom: 0;
   margin: 0 32px 90px 32px;
+}
+
+.join-section {
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.join-section .join-img {
+  width: 690px;
+  height: 1376px;
+  margin-top: 135px;
+  background: url(/assets/images/donwload-mock.png) center no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.join-section .join-description {
+  font-size: 16px;
+  color: #e9ecf0;
+  opacity: 0.5;
+  font-family: "Source Sans Pro Regular";
+  margin-top: 10px;
+  z-index: 5;
+}
+
+.join-section .join-h1 {
+  font-size: 72px;
+  font-family: "WhyteInktrap";
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 26px;
+  z-index: 5;
+}
+
+.join-section .join-gradient {
+  width: 100%;
+  height: 273px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.footer {
+  height: 366px;
+  background-color: #000000;
+  border-bottom: 16px solid #e85500;
+}
+
+.footer .footer-btns-container {
+  width: 500px;
+  height: 64px;
+}
+
+.footer .download-footer {
+  outline: none;
+  cursor: pointer;
+  background-color: #000000;
+  border: 1px solid #5b5b5b;
+  color: #ffffff;
+  font-family: "Source Sans Pro Regular";
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  width: 240px;
+  height: 64px;
+}
+
+.footer .download-footer:first-child {
+  margin-right: 22px;
+}
+
+.footer .download-footer-svgs {
+  margin-right: 10px;
+}
+
+.footer #android-download-footer {
+  margin-right: 6px;
 }
 /*# sourceMappingURL=styles.css.map */
