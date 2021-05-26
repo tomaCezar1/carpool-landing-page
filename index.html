@@ -42,10 +42,10 @@
             </svg>
           </div>
           <div class="nav-links">
-            <a href="" class="nav-black-link">Now</a>
+            <a href="" class="nav-grey-link">Now</a>
             <a href="" class="nav-grey-link">How to ride</a>
             <a href="" class="nav-grey-link">How to drive</a>
-            <a href="" class="nav-lightGrey-link">Features</a>
+            <a href="" class="nav-grey-link">Features</a>
           </div>
           <div class="nav-download">
             <h3>Get the app</h3>
@@ -59,6 +59,7 @@
                 viewBox="0 0 22 26"
               >
                 <path
+                  class="download-svg-path-nav"
                   fill="#000"
                   d="M17.767 13.827c.027-2.007 1.11-3.907 2.83-4.958-1.085-1.54-2.902-2.517-4.792-2.576-2.016-.21-3.971 1.2-4.999 1.2-1.047 0-2.629-1.18-4.333-1.144-2.22.071-4.29 1.326-5.37 3.257-2.322 3.998-.59 9.873 1.634 13.105 1.113 1.582 2.414 3.35 4.116 3.287 1.665-.068 2.287-1.056 4.298-1.056 1.991 0 2.575 1.056 4.312 1.017 1.787-.03 2.913-1.59 3.987-3.187.8-1.128 1.415-2.374 1.823-3.693-2.1-.883-3.503-2.985-3.506-5.252zM14.488 4.168c.974-1.163 1.454-2.659 1.338-4.168-1.489.155-2.864.863-3.852 1.982-.965 1.092-1.468 2.561-1.373 4.013 1.49.015 2.953-.673 3.886-1.827z"
                 />
@@ -74,6 +75,7 @@
                 viewBox="0 0 32 32"
               >
                 <path
+                  class="download-svg-path-nav"
                   fill="#000"
                   fill-rule="evenodd"
                   d="M5.15 4.81c-.097.242-.15.534-.15.872v20.636c0 .338.053.63.15.872L16.057 16 5.15 4.81zm.688 23.107c.4.158.914.095 1.473-.23l12.84-7.486-3.396-3.485L5.838 27.917zm15.205-8.235l4.004-2.334c1.27-.742 1.27-1.954 0-2.695l-4.006-2.335-3.588 3.681 3.59 3.683zM20.15 11.8L7.311 4.314c-.559-.326-1.072-.39-1.473-.231l10.917 11.2 3.395-3.484z"
@@ -88,14 +90,14 @@
       <main>
         <section class="intro">
           <div class="intro-text-wrapper">
-            <h1 class="intro-text">
+            <div class="intro-text">
               carpooling made <span class="intro-bold">easy, safe </span> and
               <div class="fun-img-container">
                 <img src="./assets/images/fun.svg" alt="Fun Image" />
               </div>
               for
               <span class="intro-italic">everyone</span>
-            </h1>
+            </div>
           </div>
 
           <div class="intro-mock">
@@ -130,7 +132,7 @@
         </section>
 
         <section class="ar-section">
-          <div class="ar-container">
+          <div class="ar-container ar-container-mobile">
             <p class="ar-text">Augmented Reality</p>
             <img
               src="./assets/images/ar-mock.png"
@@ -171,6 +173,13 @@
             a fresh way to share the road and make new connections
           </p>
           <div class="join-gradient"></div>
+          <div class="carpool-img-container" data-tilt data-tilt-scale="1.02">
+            <img
+              class="carpool-img"
+              src="/assets/images/carpool-graph.svg"
+              alt="Carpool made easy"
+            />
+          </div>
         </section>
       </main>
 
@@ -214,5 +223,12 @@
         </div>
       </footer>
     </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector('.carpool-img-container'), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
   </body>
 </html>

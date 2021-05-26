@@ -9,15 +9,12 @@
 .header {
   height: 72px;
   width: 100%;
-  // display: flex;
-  // justify-self: center;
-  // align-items: center;
   background-color: $white;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 5;
+  z-index: 10;
 }
 
 .nav {
@@ -29,7 +26,6 @@
   margin: auto;
 
   .nav-brand {
-    // margin-right: 278px;
     cursor: pointer;
   }
 
@@ -38,48 +34,65 @@
     margin-right: 40px;
     font-family: $secondaryFontBold;
   }
+}
 
-  .nav-black-link {
-    color: $black;
+.nav-grey-link {
+  color: $black;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+
+  &:first-child {
     margin-left: 0;
   }
 
-  .nav-grey-link {
-    color: $black;
-    opacity: 0.5;
-  }
-
-  .nav-lightGrey-link {
-    color: $black;
-    opacity: 0.3;
+  &:last-child {
     margin-right: 0;
   }
 
-  .nav-download {
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.nav-download {
+  display: flex;
+  align-items: center;
+
+  h3 {
+    margin-right: 16px;
+    font-weight: $medium;
+    color: $black;
+    font-family: $secondaryFontBold;
+  }
+
+  .nav-icons {
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: solid 1px $black;
+    background-color: $white;
+    transition: all 0.3s ease-in-out;
 
-    h3 {
-      // margin: 0 16px 0 170px;
-      margin-right: 16px;
-      font-weight: $medium;
-      color: $black;
-      font-family: $secondaryFontBold;
+    .download-svg-path-nav {
+      fill: $black;
+      transition: fill 0.3s ease-in-out;
     }
 
-    .nav-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      border: solid 1px $black;
-    }
+    &:hover {
+      background-color: $black;
 
-    #nav-apple {
-      margin-right: 16px;
+      .download-svg-path-nav {
+        fill: $white;
+      }
     }
+  }
+
+  #nav-apple {
+    margin-right: 16px;
   }
 }
 
@@ -95,21 +108,21 @@
 .intro-text-wrapper {
   width: 960px;
   height: 160px;
+}
 
-  .intro-text {
-    text-align: center;
-    font-size: 80px;
-    font-weight: $regular;
-    font-family: 'WhyteInktrap';
+.intro-text {
+  text-align: center;
+  font-size: 80px;
+  font-weight: $regular;
+  font-family: 'WhyteInktrap';
 
-    .intro-bold {
-      font-weight: $medium;
-    }
+  .intro-bold {
+    font-weight: $medium;
+  }
 
-    .intro-italic {
-      font-weight: $medium;
-      font-style: italic;
-    }
+  .intro-italic {
+    font-weight: $medium;
+    font-style: italic;
   }
 
   .fun-img-container {
@@ -138,11 +151,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  .intro-mock-img {
-    width: 338px;
-    height: 622px;
-  }
+.intro-mock-img {
+  width: 338px;
+  height: 622px;
 }
 
 .intro-mock-gradient {
@@ -155,7 +168,7 @@
   background: linear-gradient(
     to top,
     $white,
-    rgba(255, 255, 255, 0.88),
+    rgba(255, 255, 255, 0.9),
     rgba(255, 255, 255, 0)
   );
 }
@@ -246,6 +259,7 @@
   }
 }
 
+// Augmented Reality Section
 .ar-section {
   @extend %flex-center;
   margin-bottom: 210px;
@@ -261,6 +275,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.ar-container-mobile {
+  display: none;
 }
 
 .ar-text {
@@ -301,6 +319,7 @@
   }
 }
 
+// Video Presentation Section
 .video-section {
   @extend %flex-center;
   height: 810px;
@@ -312,7 +331,6 @@
   justify-content: center;
   align-items: center;
   color: $white;
-  border-bottom: 1px solid $grey;
 
   .video {
     justify-self: center;
@@ -323,7 +341,7 @@
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: -1px;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), $black);
     }
   }
@@ -347,6 +365,7 @@
   }
 }
 
+// Join the App Section
 .join-section {
   background-color: $black;
   display: flex;
@@ -388,11 +407,18 @@
     height: 273px;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), $black);
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     z-index: 1;
+  }
+
+  .carpool-img-container {
+    position: absolute;
+    top: 400px;
+    left: 78px;
   }
 }
 
+// Footer
 .footer {
   height: 366px;
   background-color: $black;
@@ -430,5 +456,228 @@
 
   #android-download-footer {
     margin-right: 6px;
+  }
+}
+
+// Media-queries
+@media all and (min-width: $mobile) and (max-width: $tablet) {
+  .header {
+    height: auto;
+  }
+
+  .nav {
+    padding: 24px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-download h3 {
+    display: none;
+  }
+
+  .intro {
+    margin: 192px 0 0;
+    padding: 0 24px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .intro-text {
+    font-size: 32px;
+    line-height: 40px;
+
+    .fun-img-container {
+      width: 58px;
+      height: 34px;
+
+      img {
+        width: 54px;
+        height: 100%;
+      }
+    }
+  }
+
+  .intro-mock-gradient {
+    height: 230px;
+  }
+
+  .intro-mock {
+    margin: 20px 0 2px 0;
+  }
+
+  .intro-mock-img {
+    width: 188px;
+    height: 374px;
+  }
+
+  .intro-text-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .intro-text {
+      width: 100%;
+    }
+  }
+
+  .how-to-bg-section {
+    padding: 16px;
+    height: auto;
+  }
+
+  .how-to-container {
+    width: 100%;
+    height: 635px;
+    justify-content: flex-start;
+
+    .how-to-switcher-container {
+      border: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .how-to-switcher {
+      height: 64px;
+      padding: 0;
+      margin: 24px 24px 0 24px;
+    }
+
+    .switch {
+      margin: 8px 0 8px 8px;
+    }
+
+    .switch-off {
+      margin: 8px 0 8px 8px;
+    }
+
+    .how-to-img {
+      height: 110px;
+      width: 100%;
+    }
+
+    .how-to-text {
+      margin: 88px 0 48px;
+    }
+  }
+
+  .ar-section {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .ar-container {
+    display: none;
+  }
+
+  .ar-container-mobile {
+    width: 100%;
+    height: 680px;
+    background: url('../assets/images/ar-img-mobile.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ar-mock-img {
+    margin-top: 150px;
+    width: 280px;
+    height: 560px;
+  }
+
+  .fun-way-section .grey-rectangle {
+    width: 216px;
+    height: 400px;
+  }
+
+  .fun-way-section {
+    height: auto;
+    margin: 150px 0 80px;
+  }
+
+  .fun-way-img {
+    padding: 0 6px;
+    width: 364px;
+    height: auto;
+  }
+
+  .video-section {
+    height: 480px;
+
+    .video-text {
+      font-size: 32px;
+      line-height: 40px;
+      z-index: 5;
+    }
+
+    .video-text-container {
+      margin: 200px 24px 60px;
+      z-index: 5;
+    }
+
+    .video-description {
+      font-size: 16px;
+    }
+
+    video,
+    .video,
+    .video-section {
+      height: 480px;
+    }
+  }
+
+  .join-section {
+    height: 460px;
+    width: 100%;
+
+    .join-gradient {
+      height: 134px;
+    }
+
+    .join-img {
+      width: 190px;
+      min-height: 380px;
+      background-size: cover;
+      margin-top: 54px;
+
+      .join-h1 {
+        font-size: 36px;
+        text-align: center;
+        width: 230px;
+        position: relative;
+        top: -20px;
+        margin: 0;
+      }
+    }
+
+    .join-description {
+      max-width: 210px;
+      text-align: center;
+      margin: 0;
+      position: relative;
+      top: -10px;
+      z-index: 10;
+      opacity: 0.8;
+    }
+  }
+
+  .footer {
+    height: auto;
+    border-bottom: 8px solid $orange;
+
+    .footer-btns-container {
+      flex-direction: column;
+      height: auto;
+      margin: 24px 0 32px;
+
+      .download-footer:first-child {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
   }
 }
