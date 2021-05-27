@@ -190,27 +190,47 @@
   background-color: $white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
 
   .how-to-img {
     width: 676px;
     height: 215px;
     object-fit: cover;
+    margin: 80px 0;
+  }
+
+  .route-container {
+    width: 450px;
+    height: 376px;
+    justify-self: flex-end;
+    display: none;
+  }
+
+  .how-to-route {
+    position: absolute;
+    z-index: 1;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .how-to-text {
     font-size: 16px;
     font-family: $secondaryFontBold;
-    margin: 40px 0 80px;
+    margin-top: 40px;
+    z-index: 10;
   }
 
   .how-to-switcher-container {
+    @extend %flex-center;
     width: 360px;
     height: 128px;
     border: 1px solid $grey;
+    margin-top: 80px;
     border-radius: 16px;
-    @extend %flex-center;
+    z-index: 10;
   }
 }
 

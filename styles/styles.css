@@ -262,12 +262,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .how-to-container .how-to-img {
@@ -275,19 +276,39 @@
   height: 215px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 80px 0;
+}
+
+.how-to-container .route-container {
+  width: 450px;
+  height: 376px;
+  justify-self: flex-end;
+  display: none;
+}
+
+.how-to-container .how-to-route {
+  position: absolute;
+  z-index: 1;
+  bottom: 18px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .how-to-container .how-to-text {
   font-size: 16px;
   font-family: "Source Sans Pro Semi-Bold";
-  margin: 40px 0 80px;
+  margin-top: 40px;
+  z-index: 10;
 }
 
 .how-to-container .how-to-switcher-container {
   width: 360px;
   height: 128px;
   border: 1px solid #e9ecf0;
+  margin-top: 80px;
   border-radius: 16px;
+  z-index: 10;
 }
 
 .how-to-switcher {
