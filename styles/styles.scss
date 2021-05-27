@@ -223,38 +223,142 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  position: relative;
 
   p {
-    font-family: $secondaryFontLight;
+    font-family: $secondaryFontBold;
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    transition: all 100ms ease-in-out;
+    transition-delay: 100ms;
+  }
+
+  .bold-text {
+    opacity: 1;
+  }
+
+  .passenger-box,
+  .driver-box {
+    width: 140px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
   }
 
   .switch {
-    padding: 12px 20px;
-    width: 100px;
-    background-color: $white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-
-    p {
-      font-family: $secondaryFontBold;
-    }
-  }
-
-  .switch-off {
+    position: absolute;
     cursor: pointer;
     padding: 10px 20px;
     width: 100px;
+    height: 20px;
     background-color: transparent;
     border-radius: 8px;
     @extend %flex-center;
+  }
+
+  %switched {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    background-color: $white !important;
+    transition: transform 0.3s ease-in-out;
 
     p {
-      opacity: 0.5;
-      font-family: $secondaryFontBold;
+      opacity: 1 !important;
+    }
+  }
+
+  .switched-driver {
+    top: 10px;
+    left: 0;
+    transform: translate(170px);
+    @extend %switched;
+    z-index: 1;
+  }
+
+  .switched-passenger {
+    top: 10px;
+    right: 0;
+    transform: translate(-170px);
+    z-index: 1;
+    @extend %switched;
+  }
+}
+
+//Features section
+%features-boxes {
+  width: 555px;
+  height: 276px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.features-section {
+  display: flex;
+  flex-direction: column;
+  height: 850px;
+  padding: 0 32px;
+  font-family: $secondaryFontLight;
+  font-size: 24px;
+  color: $white;
+  text-align: center;
+
+  .style-switcher {
+    @extend %features-boxes;
+    margin-top: 184px;
+    background-color: $green;
+    border-radius: 140px;
+    position: relative;
+    box-shadow: 32px 0 2px 0px rgba(210, 198, 94, 0.2),
+      70px -2px 2px 0px rgba(210, 198, 94, 0.2);
+
+    img,
+    p {
+      z-index: 5;
+    }
+
+    .style-switcher-circle {
+      position: absolute;
+      right: 30px;
+      // top: 14px;
+      // bottom: 14px;
+      width: 250px;
+      height: 250px;
+      z-index: 0;
+      border-radius: 100%;
+      background-color: #c9bd5c;
+    }
+  }
+
+  .features-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 60px 0;
+
+    .trafic-box {
+      @extend %features-boxes;
+      background-color: $greyBlue;
+      margin-right: 32px;
+    }
+
+    .schedule-box {
+      @extend %features-boxes;
+      background-color: $orange;
+
+      p {
+        padding-top: 16px;
+        width: 350px;
+      }
     }
   }
 }
@@ -277,9 +381,9 @@
   align-items: center;
 }
 
-.ar-container-mobile {
-  display: none;
-}
+// .ar-container-mobile {
+//   display: none;
+// }
 
 .ar-text {
   margin-top: 4px;

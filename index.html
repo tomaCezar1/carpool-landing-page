@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/constants.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <div class="layout">
@@ -93,7 +94,7 @@
             <div class="intro-text">
               carpooling made <span class="intro-bold">easy, safe </span> and
               <div class="fun-img-container">
-                <img src="./assets/images/fun.svg" alt="Fun Image" />
+                <img src="assets/images/fun.svg" alt="Fun Image" />
               </div>
               for
               <span class="intro-italic">everyone</span>
@@ -102,7 +103,7 @@
 
           <div class="intro-mock">
             <img
-              src="./assets/images/intro-mock.png"
+              src="assets/images/intro-mock.png"
               class="intro-mock-img"
               alt="Phone mock"
             />
@@ -114,20 +115,43 @@
           <div class="how-to-container">
             <div class="how-to-switcher-container">
               <div class="how-to-switcher">
-                <div class="switch">
-                  <p>Passenger</p>
+                <div class="passenger-box">
+                  <p id="passanger-text">Passenger</p>
                 </div>
-                <div class="switch-off">
-                  <p>Driver</p>
+                <div id="passenger" class="switch switched-passenger"></div>
+                <div class="driver-box">
+                  <p id="driver-text">Driver</p>
                 </div>
+                <div id="driver" class="switch"></div>
               </div>
             </div>
             <p class="how-to-text">See who's driving and ask to join</p>
             <img
-              src="/assets/images/how-to-drive.png"
+              src="assets/images/how-to-drive.png"
               class="how-to-img"
               alt="How to drive"
             />
+          </div>
+        </section>
+
+        <section class="features-section">
+          <div class="style-switcher">
+            <div class="style-switcher-circle"></div>
+            <img src="assets/images/map-icon.svg" alt="Map Icon" />
+            <p>Map style switcher</p>
+          </div>
+          <div class="features-container">
+            <div class="trafic-box">
+              <img src="assets/images/traffic-icon.svg" alt="Traffic Icon" />
+              <p>Real-time trafic date</p>
+            </div>
+            <div class="schedule-box">
+              <img
+                src="assets/images/transport-icon.svg"
+                alt="Transport Icon"
+              />
+              <p>Schedule of public transport that is near you</p>
+            </div>
           </div>
         </section>
 
@@ -135,7 +159,7 @@
           <div class="ar-container ar-container-mobile">
             <p class="ar-text">Augmented Reality</p>
             <img
-              src="./assets/images/ar-mock.png"
+              src="assets/images/ar-mock.png"
               class="ar-mock-img"
               alt="Augmented Reality Bg"
             />
@@ -145,7 +169,7 @@
         <section class="fun-way-section">
           <div class="grey-rectangle"></div>
           <img
-            src="./assets/images/fun-way-text.png"
+            src="assets/images/fun-way-text.png"
             class="fun-way-img"
             alt="The new fun way to ride"
           />
@@ -176,7 +200,7 @@
           <div class="carpool-img-container" data-tilt data-tilt-scale="1.02">
             <img
               class="carpool-img"
-              src="/assets/images/carpool-graph.svg"
+              src="assets/images/carpool-graph.svg"
               alt="Carpool made easy"
             />
           </div>
