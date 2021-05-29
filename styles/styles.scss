@@ -1,5 +1,25 @@
 @import 'constants.scss';
 
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
 %flex-center {
   display: flex;
   justify-content: center;
@@ -14,7 +34,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 .nav {
@@ -202,9 +222,9 @@
   }
 
   .route-container {
+    justify-self: flex-end;
     width: 450px;
     height: 376px;
-    justify-self: flex-end;
     display: none;
   }
 
@@ -350,8 +370,6 @@
     .style-switcher-circle {
       position: absolute;
       right: 30px;
-      // top: 14px;
-      // bottom: 14px;
       width: 250px;
       height: 250px;
       z-index: 0;
@@ -371,12 +389,16 @@
       margin-right: 32px;
     }
 
+    .features-boxes-text {
+      margin-top: 16px;
+      opacity: 0.9;
+    }
+
     .schedule-box {
       @extend %features-boxes;
       background-color: $orange;
 
       p {
-        padding-top: 16px;
         width: 350px;
       }
     }
@@ -400,10 +422,6 @@
   flex-direction: column;
   align-items: center;
 }
-
-// .ar-container-mobile {
-//   display: none;
-// }
 
 .ar-text {
   margin-top: 4px;
@@ -550,6 +568,7 @@
   @extend %flex-center;
 
   .footer-btns-container {
+    margin: 170px 0 144px;
     width: 500px;
     height: 64px;
     @extend %flex-center;
@@ -584,13 +603,13 @@
 }
 
 // Media-queries
-@media all and (min-width: $mobile) and (max-width: $tablet) {
+@media all and (min-width: $mobile) and (max-width: $tablet - 1px) {
   .header {
     height: auto;
   }
 
   .nav {
-    padding: 24px;
+    padding: 0 24px;
   }
 
   .nav-links {
@@ -662,16 +681,28 @@
       border: none;
       width: 100%;
       height: auto;
+      margin-top: 24px;
     }
 
     .how-to-switcher {
       height: 64px;
       padding: 0;
-      margin: 24px 24px 0 24px;
+      margin: 0 24px;
+
+      .switched-passenger {
+        top: 5px;
+        right: -8px;
+      }
+
+      .switched-driver {
+        top: 5px;
+        left: -16px;
+      }
     }
 
     .switch {
       margin: 8px 0 8px 8px;
+      width: 84px;
     }
 
     .switch-off {
@@ -679,12 +710,65 @@
     }
 
     .how-to-img {
+      width: calc(100% - 4px);
       height: 110px;
-      width: 100%;
+      margin: 0;
+    }
+
+    .how-to-route {
+      width: calc(100% - 20px);
+      bottom: 120px;
     }
 
     .how-to-text {
       margin: 88px 0 48px;
+    }
+  }
+
+  .features-section {
+    padding: 40px 24px 60px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+
+    .style-switcher {
+      width: 300px;
+      height: 160px;
+      box-shadow: 12px 0 2px 0px rgba(210, 198, 94, 0.2),
+        24px -2px 2px 0px rgba(210, 198, 94, 0.2);
+      margin-top: 40px;
+      position: relative;
+      left: -12px;
+
+      .style-switcher-circle {
+        width: 140px;
+        height: 140px;
+        right: 14px;
+      }
+    }
+
+    .features-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      width: 100%;
+
+      .features-boxes {
+        width: 100%;
+        height: 160px;
+        margin: 0;
+      }
+
+      .schedule-box {
+        p {
+          width: 260px;
+        }
+      }
+
+      .trafic-box {
+        margin: 32px 0 24px;
+      }
     }
   }
 
@@ -725,7 +809,7 @@
 
   .fun-way-img {
     padding: 0 6px;
-    width: 364px;
+    width: calc(100% - 8px);
     height: auto;
   }
 
@@ -787,6 +871,17 @@
       z-index: 10;
       opacity: 0.8;
     }
+
+    .carpool-img-container {
+      width: 250px;
+      height: 210px;
+      top: 65px;
+      left: 18px;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   .footer {
@@ -803,5 +898,284 @@
         margin-bottom: 16px;
       }
     }
+  }
+}
+
+@media all and (min-width: $mobile) and (max-width: 375px) {
+  .features-section {
+    .style-switcher {
+      width: 260px;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+  .header {
+    height: auto;
+  }
+
+  .nav {
+    padding: 0 32px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .intro {
+    margin: 256px 0 0;
+    padding: 0 32px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .intro-text {
+    font-size: 64px;
+    line-height: 72px;
+
+    .fun-img-container {
+      width: 134px;
+      height: 80px;
+      top: 16px;
+
+      img {
+        width: 134px;
+        height: 100%;
+      }
+    }
+  }
+
+  .intro-mock-gradient {
+    height: 380px;
+  }
+
+  .intro-mock {
+    margin: 32px 0 2px 0;
+  }
+
+  .intro-mock-img {
+    width: 310px;
+    height: 620px;
+  }
+
+  .intro-text-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .intro-text {
+      width: 100%;
+    }
+  }
+
+  .how-to-bg-section {
+    padding: 40px 32px;
+    height: auto;
+  }
+
+  .how-to-container {
+    width: 100%;
+    height: 635px;
+    justify-content: flex-start;
+
+    .how-to-switcher-container {
+      width: 360px;
+      justify-content: center;
+      height: auto;
+      margin-top: 80px;
+    }
+
+    .how-to-switcher {
+      height: 64px;
+      padding: 0;
+      margin: 20px;
+
+      .switched-passenger {
+        top: 5px;
+        right: -4px;
+      }
+
+      .switched-driver {
+        top: 5px;
+        left: -12px;
+      }
+    }
+
+    .switch {
+      margin: 8px 0 8px 8px;
+      width: 84px;
+    }
+
+    .switch-off {
+      margin: 8px 0 8px 8px;
+    }
+
+    .how-to-img {
+      width: calc(100% - 14px);
+      height: auto;
+      margin: 0;
+    }
+
+    .how-to-route {
+      width: auto;
+      height: 510px;
+      bottom: 45px;
+    }
+
+    .how-to-text {
+      margin: 40px 0 80px;
+    }
+  }
+
+  .features-section {
+    padding: 0 32px;
+    height: auto;
+
+    .style-switcher {
+      width: 320px;
+      height: 160px;
+      box-shadow: 20px 0 2px 0px rgba(210, 198, 94, 0.2),
+        40px -2px 2px 0px rgba(210, 198, 94, 0.2);
+      margin-top: 120px;
+      position: relative;
+      left: -12px;
+
+      .style-switcher-circle {
+        width: 140px;
+        height: 140px;
+        right: 14px;
+      }
+
+      .features-map-icon {
+        margin-bottom: 8px;
+      }
+    }
+
+    .features-container {
+      margin-top: 32px;
+      width: 100%;
+
+      .features-boxes {
+        width: 322px;
+        height: 160px;
+        margin: 0;
+      }
+
+      .schedule-box {
+        p {
+          width: 260px;
+        }
+      }
+
+      .trafic-box {
+        margin-right: 24px;
+      }
+    }
+  }
+
+  .ar-section {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .ar-container {
+    display: none;
+  }
+
+  .ar-container-mobile {
+    width: 100%;
+    height: 680px;
+    background: url('../assets/images/ar-img-mobile.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ar-mock-img {
+    margin-top: 110px;
+  }
+
+  .fun-way-section .grey-rectangle {
+    width: 272px;
+    height: 496px;
+  }
+
+  .fun-way-section {
+    height: auto;
+    margin: 210px 0 140px;
+  }
+
+  .fun-way-img {
+    width: calc(100% - 90px);
+    height: auto;
+  }
+
+  video,
+  .video,
+  .video-section {
+    height: 810px;
+  }
+
+  .video-section {
+    .video-text {
+      font-size: 72px;
+      line-height: 80px;
+      z-index: 5;
+    }
+
+    .video-text-container {
+      margin: 370px 32px 90px;
+      z-index: 5;
+    }
+
+    .video-description {
+      font-size: 24px;
+    }
+  }
+
+  .join-section {
+    width: 100%;
+
+    .join-gradient {
+      height: 274px;
+    }
+
+    .join-img {
+      width: 520px;
+      height: 1040px;
+      margin-top: 210px;
+      background-size: cover;
+
+      .join-h1 {
+        position: relative;
+        bottom: -10px;
+      }
+    }
+
+    .join-description {
+      position: relative;
+      top: -10px;
+      margin-top: 20px;
+      text-align: center;
+      opacity: 0.8;
+    }
+
+    .carpool-img-container {
+      width: 700px;
+      top: 290px;
+      left: -60px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer {
+    height: auto;
   }
 }

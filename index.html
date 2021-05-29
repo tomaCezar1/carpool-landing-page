@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/constants.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -144,20 +142,26 @@
         <section class="features-section">
           <div class="style-switcher">
             <div class="style-switcher-circle"></div>
-            <img src="assets/images/map-icon.svg" alt="Map Icon" />
+            <img
+              class="features-map-icon"
+              src="assets/images/map-icon.svg"
+              alt="Map Icon"
+            />
             <p>Map style switcher</p>
           </div>
           <div class="features-container">
-            <div class="trafic-box">
+            <div class="trafic-box features-boxes">
               <img src="assets/images/traffic-icon.svg" alt="Traffic Icon" />
-              <p>Real-time trafic date</p>
+              <p class="features-boxes-text">Real-time trafic date</p>
             </div>
-            <div class="schedule-box">
+            <div class="schedule-box features-boxes">
               <img
                 src="assets/images/transport-icon.svg"
                 alt="Transport Icon"
               />
-              <p>Schedule of public transport that is near you</p>
+              <p class="features-boxes-text">
+                Schedule of public transport that is near you
+              </p>
             </div>
           </div>
         </section>
@@ -254,6 +258,7 @@
         </div>
       </footer>
     </div>
+
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script type="text/javascript">
       VanillaTilt.init(document.querySelector('.carpool-img-container'), {

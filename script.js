@@ -8,6 +8,8 @@ const howToText = document.querySelector('.how-to-text');
 const routeImg = document.querySelector('.route-container');
 const carsImg = document.querySelector('.how-to-img');
 
+const logo = document.querySelector('.nav-brand');
+
 const switchToDriver = () => {
   driver.classList.add('switched-driver');
   passenger.classList.remove('switch-on', 'switched-passenger');
@@ -28,5 +30,11 @@ const switchToPassenger = () => {
   carsImg.style.display = 'block';
 };
 
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
+
+// Event listeners
 passengerBox.addEventListener('click', switchToPassenger);
 driverBox.addEventListener('click', switchToDriver);
+logo.addEventListener('click', scrollToTop);
